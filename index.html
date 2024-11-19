@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML + CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body style="background-color: #0a001b; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <section class="contenedor-login" style="background-color: #12122b; display: flex; flex-direction: column; width: 500px; color: white; padding: 20px; border-radius: 8px; margin: 0 10px; transition: 1s; box-shadow: 0 0 10px black;">
+      <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+        <img src="./imagenes/logoTC.enc" alt="Logo de TC oficial" srcset="" width="100px" style="border-radius: 10px; box-shadow: 0 0 10px black;">
+        <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-decoration: none; margin: 0 5px;">Chocotorro's TC</h1>
+      </div>
+      <input type="text" placeholder="Ingresa tu nombre de usuario" id="usuario" style="width: 90%; margin: 5px auto; padding: 10px; border: 0; background-color: #12122b; border-bottom: 1px solid white; color: white;">
+      <input type="password" name="contraseña-login" id="contraseña" placeholder="Ingresa tu contraseña" style="width: 90%; margin: 5px auto; padding: 10px; border: 0; background-color: #12122b; border-bottom: 1px solid white; color: white;">
+      <div class="botones" style="display: flex; justify-content: center; transition: 1s;">
+        <button id="registro" type="button" style="margin: 10px 5px; padding: 10px 20px; background-color: #282850; color: white; border: none; cursor: pointer; border-radius: 10px;">Registrarse</button>
+        <button id="login" type="button" style="margin: 10px 5px; padding: 10px 20px; background-color: #282850; color: white; border: none; cursor: pointer; border-radius: 10px;">Acceso</button>
+      </div>
+    </section>
+    <script src="./login.js"></script>
+  </body>
+</html>
