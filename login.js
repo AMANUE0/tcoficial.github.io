@@ -1,69 +1,97 @@
+// Referencias a los elementos del DOM
 let usuario = document.querySelector("#usuario");
 let contraseña = document.querySelector("#contraseña");
 
 let registro = document.querySelector("#registro");
 let acceso = document.querySelector("#login");
+let acceder = document.querySelector("#acceder");
 
-let usuarios = 0;
-let datosUsuarios = {};
+let mensajeError = document.querySelector(".mensaje-error");
 
+// Carga usuarios desde localStorage (si existen)
+let datosUsuarios = JSON.parse(localStorage.getItem("datosUsuarios")) || {};
+
+// Función para guardar usuarios en localStorage
+function guardarUsuarios() {
+  localStorage.setItem("datosUsuarios", JSON.stringify(datosUsuarios));
+}
+
+// Cambia el estilo del botón "Acceder"
+function activarBotonAcceder() {
+  acceder.style.backgroundColor = "white";
+  acceder.style.color = "black";
+  acceder.style.border = "2px solid black";
+  acceder.style.cursor = "pointer";
+  acceder.href = "./tienda.html"; // Asigna el enlace
+}
+
+// Función para registrar un usuario
 function registrarUsuario(usuario, contraseña) {
-  // Validar si el usuario ya existe
   if (datosUsuarios[usuario]) {
-    alert("El usuario ingresado ya existe.");
+    mensajeError.textContent = "El usuario ingresado ya existe.";
     return;
   }
 
-  // Registrar al usuario
   datosUsuarios[usuario] = contraseña;
-  usuarios++; // Incrementar el contador de usuarios
+  guardarUsuarios(); // Guarda los datos en localStorage
 
-  alert(
-    `Registro exitoso. El usuario es ${usuario} y la contraseña es ${contraseña}`
-  );
+  mensajeError.textContent = "Registro exitoso. Ahora puedes iniciar sesión.";
+  activarBotonAcceder();
 }
 
-function mostrarUsuarios() {
-  alert("Usuarios registrados:");
-  for (const usuario in datosUsuarios) {
-    alert(`Usuario: ${usuario}, Contraseña: ${datosUsuarios[usuario]}`);
+// Función para iniciar sesión
+function iniciarSesion(usuario, contraseña) {
+  if (!datosUsuarios[usuario]) {
+    mensajeError.textContent = "Usuario no registrado.";
+    return;
   }
+
+  if (datosUsuarios[usuario] !== contraseña) {
+    mensajeError.textContent = "Contraseña incorrecta.";
+    return;
+  }
+
+  mensajeError.textContent = "Inicio de sesión exitoso.";
+  activarBotonAcceder();
+  setTimeout(() => {
+    window.location.href = "./tienda.html"; // Redirige al usuario
+  }, 1500);
 }
 
-const mensajesAlerta = {
-  datosVacios: "No haz ingresado el usuario y contraseña.",
-  usuarioVacio: "Porfavor ingresa el nombre de usuario.",
-  contraseñaVacio: "Porfavor ingresa la contraseña.",
-  usuarioExistente: "El usuario ingresado ya existe.",
-  usuarioInvalido: "Usuario no valido.",
-  contraseñaInvalida: "Error al ingresar la contraseña",
-  contraseñaTamaño:
-    "El tamaño de la contraseña debe de ser mayor a 8 caracteres.",
-};
-
+// Validación de datos ingresados
 function validarDatos(usuario, contraseña, boton) {
   if (usuario === "" && contraseña === "") {
-    alert(mensajesAlerta.datosVacios);
-  } else if (usuario === "") {
-    alert(mensajesAlerta.usuarioVacio);
-  } else if (contraseña === "") {
-    alert(mensajesAlerta.contraseñaVacio);
-  } else if (contraseña.length < 8) {
-    alert(mensajesAlerta.contraseñaTamaño);
-  } else {
-    if (boton === "registro") {
-      registrarUsuario(usuario, contraseña);
-    } else if (boton === "acceso") {
-      alert("Acceso exitoso. Mostrando usuarios registrados:");
-      windows.location.href = "https//youtube.com:";
-      mostrarUsuarios();
-    }
+    mensajeError.textContent = "Debes ingresar un usuario y contraseña.";
+    return;
+  }
+
+  if (usuario === "") {
+    mensajeError.textContent = "Por favor ingresa un nombre de usuario.";
+    return;
+  }
+
+  if (contraseña === "") {
+    mensajeError.textContent = "Por favor ingresa una contraseña.";
+    return;
+  }
+
+  if (contraseña.length < 8) {
+    mensajeError.textContent = "La contraseña debe tener al menos 8 caracteres.";
+    return;
+  }
+
+  if (boton === "registro") {
+    registrarUsuario(usuario, contraseña);
+  } else if (boton === "acceso") {
+    iniciarSesion(usuario, contraseña);
   }
 }
 
+// Eventos para registro e inicio de sesión
 registro.addEventListener("click", () => {
   validarDatos(usuario.value, contraseña.value, "registro");
 });
+
 acceso.addEventListener("click", () => {
   validarDatos(usuario.value, contraseña.value, "acceso");
 });
