@@ -1,4 +1,3 @@
-// Referencias a los elementos del DOM
 let usuario = document.querySelector("#usuario");
 let contraseña = document.querySelector("#contraseña");
 
@@ -16,16 +15,14 @@ function guardarUsuarios() {
   localStorage.setItem("datosUsuarios", JSON.stringify(datosUsuarios));
 }
 
-// Cambia el estilo del botón "Acceder"
 function activarBotonAcceder() {
   acceder.style.backgroundColor = "white";
   acceder.style.color = "black";
   acceder.style.border = "2px solid black";
   acceder.style.cursor = "pointer";
-  acceder.href = "./tienda.html"; // Asigna el enlace
+  acceder.href = "./index.html"; 
 }
 
-// Función para registrar un usuario
 function registrarUsuario(usuario, contraseña) {
   if (datosUsuarios[usuario]) {
     mensajeError.textContent = "El usuario ingresado ya existe.";
@@ -33,13 +30,12 @@ function registrarUsuario(usuario, contraseña) {
   }
 
   datosUsuarios[usuario] = contraseña;
-  guardarUsuarios(); // Guarda los datos en localStorage
+  guardarUsuarios(); 
 
   mensajeError.textContent = "Registro exitoso. Ahora puedes iniciar sesión.";
   activarBotonAcceder();
 }
 
-// Función para iniciar sesión
 function iniciarSesion(usuario, contraseña) {
   if (!datosUsuarios[usuario]) {
     mensajeError.textContent = "Usuario no registrado.";
@@ -54,11 +50,10 @@ function iniciarSesion(usuario, contraseña) {
   mensajeError.textContent = "Inicio de sesión exitoso.";
   activarBotonAcceder();
   setTimeout(() => {
-    window.location.href = "./tienda.html"; // Redirige al usuario
+    window.location.href = "./index.html";
   }, 1500);
 }
 
-// Validación de datos ingresados
 function validarDatos(usuario, contraseña, boton) {
   if (usuario === "" && contraseña === "") {
     mensajeError.textContent = "Debes ingresar un usuario y contraseña.";
@@ -87,7 +82,6 @@ function validarDatos(usuario, contraseña, boton) {
   }
 }
 
-// Eventos para registro e inicio de sesión
 registro.addEventListener("click", () => {
   validarDatos(usuario.value, contraseña.value, "registro");
 });
