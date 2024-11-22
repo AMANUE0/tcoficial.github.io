@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Chocotorro's TC - Login</title>
+  </head>
+  <body style="background-color: #222223; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: Verdana, Geneva, Tahoma, sans-serif; color: white;">
+    <section style="background-color: #1b1b1b; display: flex; flex-direction: column; width: 90%; max-width: 500px; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px black; box-shadow: 0 0 10px black;">
+      <!-- Encabezado -->
+      <div style="text-align: center; margin-bottom: 20px;">
+        <img src="./imagenes/logoTC.enc" alt="Logo de TC oficial" width="100px" style="border-radius: 10px; box-shadow: 0 0 10px black;" />
+        <h1 style="font-size: 1.5rem; margin: 10px 0 0;">Chocotorro's TC</h1>
+      </div>
+
+      <!-- Formulario -->
+      <div>
+        <input
+          type="text"
+          placeholder="Ingresa tu nombre de usuario"
+          id="usuario"
+          style="width: 90%; margin: 10px auto; padding: 10px; border: none; background-color: #222223; border-bottom: 2px solid white; color: white; border-radius: 4px; display: block;"
+        />
+        <input
+          type="password"
+          name="contraseña-login"
+          id="contraseña"
+          placeholder="Ingresa tu contraseña"
+          style="width: 90%; margin: 10px auto; padding: 10px; border: none; background-color: #222223; border-bottom: 2px solid white; color: white; border-radius: 4px; display: block;"
+        />
+        <p class="mensaje-error" style="color: red; font-weight: bold; text-align: center;"></p>
+      </div>
+
+      <!-- Botones -->
+      <div style="display: flex; justify-content: center; margin-top: 20px;">
+        <button
+          id="registro"
+          type="button"
+          style="margin: 10px 5px; padding: 10px 20px; background-color: #0e0e0f; color: white; border: none; cursor: pointer; border-radius: 10px;"
+        >
+          Registrarse
+        </button>
+        <button
+          id="login"
+          type="button"
+          style="margin: 10px 5px; padding: 10px 20px; background-color: #0e0e0f; color: white; border: none; cursor: pointer; border-radius: 10px;"
+        >
+          Acceso
+        </button>
+        <a
+          id="acceder"
+          href="#"
+          style="margin: 10px 5px; padding: 10px 20px; background-color: #555; color: white; border: none; border-radius: 10px; text-align: center; text-decoration: none;"
+        >
+          Acceder
+        </a>
+      </div>
+    </section>
+    <script src="./login.js"></script>
+  </body>
+</html>
