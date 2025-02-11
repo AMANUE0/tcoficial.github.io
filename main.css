@@ -1,0 +1,269 @@
+
+
+:root {
+    --color: #333333;
+    --bg-1: white;
+    --bg-2: #E0E0E0;
+    --bg-3: blue;
+    --bg-4: black;
+    --font: inter GOOGLE;
+}
+
+.dark-mode {
+    --color: white;
+    --bg-1: black;
+    --bg-2: red;
+    --bg-3: blue;
+    --bg-4: black;
+    
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-1);
+    color: var(--color);
+    font-family: var(--font);
+    margin: 0;
+}
+p {
+    color: #888888;
+    font-weight: bold;
+}
+header {
+    background-color: var(--bg-2);
+    color: var(--color);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.logo {
+    margin: 0 10px;
+}
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 30px;
+    list-style: none;
+}
+.nav-item {
+    text-decoration: none;
+    color: #888888;
+    transition: .5s;
+    font-weight: bold;
+
+}
+.nav-item:hover {
+    cursor: pointer;
+    color: #666464;
+}
+.content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero {
+    width: 100%;
+    height: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hero > div {
+    width: 700px;
+    text-align: center;
+}
+.hero > div > p {
+    margin: 10px 100px;
+    font-size: 1.2rem;
+}
+
+.hero > div:last-child {
+    background-color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.hero > div > h1 {
+    font-size: 2.5rem;
+}
+
+.hero > div > a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px black;
+    background-color: #222222;
+    transition: .5s ease;
+}
+
+.hero > div > a:last-child {
+    color: black;
+    background-color: #EBEBEB;
+}
+.hero > div > a:hover {
+    transform: scale(1.1);
+
+}
+
+/*-------------------*/
+.introduction-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./imagenes/LinceNexus.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+
+.introduction-page > h2 {
+    font-size: 2.1rem;
+}
+.introduction-page > p {
+    font-size: 1.2rem;
+}
+/*----------*/
+
+.sections-1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.sections-2 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.section {
+    transition: .4s;
+}
+
+.section:hover {
+    transform: scale(1.1);
+}
+.section-asignatures {
+    width: 250px;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-exams {
+    width: 500px;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-resources {
+    width: 250px;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-results {
+    width: 500px;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.img-section-1 {
+    width: 100%;
+    height: 250px;
+    background-image: url("./imagenes/background-img.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+.img-section-2 {
+    width: 100%;
+    height: 250px;
+    background-image: url("./imagenes/background-img.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.img-section-3 {
+    width: 100%;
+    height: 250px;
+    background-image: url("./imagenes/background-img.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.img-section-4 {
+    width: 100%;
+    height: 250px;
+    background-image: url("./imagenes/background-img.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+/*----------*/
+footer {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer > h3 {
+    font-size: 2.5rem;
+    margin: 20px auto;
+}
+@font-face {
+    font-family: "inter GOOGLE";
+    src: url('./fonts/inter/Inter-VariableFont_opsz\,wght.ttf');
+}
+@media only screen and (max-width: 800px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .nav-bar {
+        flex-direction: column;
+    }
+    .hero-h1 {
+        transform: scale(.45);
+    }
+    .hero-p {
+        transform: scale(.7);
+    }
+  }

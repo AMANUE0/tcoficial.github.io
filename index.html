@@ -3,172 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="imagenes/logoTC.enc" type="image/x-icon">
-    <title>TC oficial | Tienda</title>
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!------------->
+    <link rel="stylesheet" href="./main.css">
+    <title>Lince Nexus</title>
 </head>
-<body style="font-family: Verdana, Geneva, Tahoma, sans-serif; margin: 0; background-color: #222223; color: white;">
-    <header style="background-color: black; display: flex; flex-direction: column; padding: 5px;">
-        <section style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
-            <img src="./imagenes/Logo2.png" alt="Logo de la pagina oficial de los TC" style="height: 50px; margin: 0;">
-            <input type="text" placeholder="Buscar"
-                style="background-color: black; font-size: 0.9rem; color: white; padding: 5px; width: 100%; max-width: 300px; border: 0; border-bottom: 1px solid white; margin: 5px 0;">
-        </section>
-        <nav style="display: flex; justify-content: center; padding: 5px;">
-            <ul style="display: flex; justify-content: center; flex-wrap: wrap; list-style: none; padding: 0; margin: 0;">
-                <li><a href="#camisetas" style="margin: 5px 10px; color: white; text-decoration: none; font-size: 1rem;">Camisetas</a></li>
-                <li><a href="#sudaderas" style="margin: 5px 10px; color: white; text-decoration: none; font-size: 1rem;">Sudaderas</a></li>
-                <li><a href="#shorts" style="margin: 5px 10px; color: white; text-decoration: none; font-size: 1rem;">Short's</a></li>
-                <li><a href="#calzado" style="margin: 5px 10px; color: white; text-decoration: none; font-size: 1rem;">Calzado</a></li>
-                <li><a href="./gym-ubicacion.html" style="margin: 5px 10px; color: white; text-decoration: none; font-size: 1rem;">GYM Ubicacion</a></li>
+<body class="">
+    <header>
+        <h1 class="logo">LN</h1>
+        <nav>
+            <ul class="nav-bar">
+                <li><a class="nav-item" href="./pages/asignatures.html">Asignaturas</a></li>
+                <li><a class="nav-item" href="./pages/proximamente.html" >Recursos</a></li>
+                <li><a class="nav-item" href="./pages/proximamente.html" >Actualizaciones</a></li>
             </ul>
         </nav>
     </header>
     
-    
-    <main style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding: 20px; flex-direction: column;">
-        <!-- Camisetas -->
-        <h1 style="margin: 40px auto; " id="camisetas">Camisetas</h1>
-        <section style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-            <article style="flex: 1 1; box-sizing: border-box; text-align: center; max-width: 300px;  border-radius: 10px; box-shadow: 0 0 10px black; padding: 10px;">
-                <img src="./imagenes/camisetas/c1.png" alt="Imagen de producto en venta" style="width: 100%; max-width: 200px; height: auto; border-radius: 10px;">
-                <p style="margin-top: 10px;">Camiseta de compresion</p>
-                <p style="margin-top: 10px;">$500</p>
-                <button style="padding: 10px 20px; border-radius: 10px; cursor: pointer; border: 0;">Comprar</button>
-            </article>
-            <article style="flex: 1 1; box-sizing: border-box; text-align: center; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px black; padding: 10px;">
-                <img src="./imagenes/camisetas/c2.png" alt="Imagen de producto en venta" style="width: 100%; max-width: 200px; height: auto; border-radius: 10px;">
-                <p style="margin-top: 10px;">Camiseta de compresion</p>
-                <p style="margin-top: 10px;">$500</p>
-                <button style="padding: 10px 20px; border-radius: 10px; cursor: pointer; border: 0;">Comprar</button>
-            </article><article style="flex: 1 1; box-sizing: border-box; text-align: center; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px black; padding: 10px;">
-                <img src="./imagenes/camisetas/c3.jfif" alt="Imagen de producto en venta" style="width: 100%; max-width: 200px; height: auto; border-radius: 10px;">
-                <p style="margin-top: 10px;">Camiseta de compresion</p>
-                <p style="margin-top: 10px;">$500</p>
-                <button style="padding: 10px 20px; border-radius: 10px; cursor: pointer; border: 0;">Comprar</button>
-            </article><article style="flex: 1 1; box-sizing: border-box; text-align: center; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px black; padding: 10px;">
-                <img src="./imagenes/camisetas/c4.jfif" alt="Imagen de producto en venta" style="width: 100%; max-width: 200px; height: auto; border-radius: 10px;">
-                <p style="margin-top: 10px;">Camiseta de compresion</p>
-                <p style="margin-top: 10px;">$500</p>
-                <button style="padding: 10px 20px; border-radius: 10px; cursor: pointer; border: 0;">Comprar</button>
-            </article>
-        </section>
-        <!-- Sudaderas -->
-        <h1 style="margin: 40px auto; " id="sudaderas">Sudaderas</h1>
-        <section style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-            <article style="flex: 1 1; box-sizing: border-box; text-align: center; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px black; padding: 10px;">
-                
-                <img src="./imagenes/sudaderas/s1.png" alt="Imagen de producto en venta" style="width: 100%; max-width: 200px; height: auto; border-radius: 10px;">
-                <p style="margin-top: 10px;">Sudadera deportiva</p>
-                <p style="margin-top: 10px;">$500</p>
-                <button style="padding: 10px 20px; border-radius: 10px; cursor: pointer; border: 0;">Comprar</button>
-            </article>
-            <article style="flex: 1 1; box-sizing: border-box; text-align: center; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px black; padding: 10px;">
-                
-                <img src="./imagenes/sudaderas/s2.png" alt="Imagen de producto en venta" style="width: 100%; max-width: 200px; height: auto; border-radius: 10px;">
-                <p style="margin-top: 10px;">Sudadera deportiva</p>
-                <p style="margin-top: 10px;">$500</p>
-                <button style="padding: 10px 20px; border-radius: 10px; cursor: pointer; border: 0;">Comprar</button>
-            </article>
-            <article style="flex: 1 1; box-sizing: border-box; text-align: center; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px black; padding: 10px;">
-                
-                <img src="./imagenes/sudaderas/s3.png" alt="Imagen de producto en venta" style="width: 100%; max-width: 200px; height: auto; border-radius: 10px;">
-                <p style="margin-top: 10px;">Sudadera deportiva</p>
-                <p style="margin-top: 10px;">$500</p>
-                <button style="padding: 10px 20px; border-radius: 10px; cursor: pointer; border: 0;">Comprar</button>
-            </article>
-            <article style="flex: 1 1; box-sizing: border-box; text-align: center; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px black; padding: 10px;">
-                
-                <img src="./imagenes/sudaderas/s4.jfif" alt="Imagen de producto en venta" style="width: 100%; max-width: 200px; height: auto; border-radius: 10px;">
-                <p style="margin-top: 10px;">Sudadera deportiva</p>
-                <p style="margin-top: 10px;">$500</p>
-                <button style="padding: 10px 20px; border-radius: 10px; cursor: pointer; border: 0;">Comprar</button>
-            </article>
-        </section>
-        <!-- Shores -->
-        <h1 style="margin: 40px auto; " id="shorts">Short's</h1>
-        <section style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-            <article style="flex: 1 1; box-sizing: border-box; text-align: center; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px black; padding: 10px;">
-                <img src="./imagenes/Shorts/Sh1.jpg" alt="Imagen de producto en venta" style="width: 100%; max-width: 200px; height: auto; border-radius: 10px;">
-                <p style="margin-top: 10px;">Shorts deportivos</p>
-                <p style="margin-top: 10px;">$500</p>
-                <button style="padding: 10px 20px; border-radius: 10px; cursor: pointer; border: 0;">Comprar</button>
-            </article>
-            <article style="flex: 1 1; box-sizing: border-box; text-align: center; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px black; padding: 10px;">
-                <img src="./imagenes/Shorts/Sh2.jpg" alt="Imagen de producto en venta" style="width: 100%; max-width: 200px; height: auto; border-radius: 10px;">
-                <p style="margin-top: 10px;">Shorts deportivos</p>
-                <p style="margin-top: 10px;">$500</p>
-                <button style="padding: 10px 20px; border-radius: 10px; cursor: pointer; border: 0;">Comprar</button>
-            </article>
-            <article style="flex: 1 1; box-sizing: border-box; text-align: center; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px black; padding: 10px;">
-                <img src="./imagenes/Shorts/Sh3.jpg" alt="Imagen de producto en venta" style="width: 100%; max-width: 200px; height: auto; border-radius: 10px;">
-                <p style="margin-top: 10px;">Shorts deportivos</p>
-                <p style="margin-top: 10px;">$500</p>
-                <button style="padding: 10px 20px; border-radius: 10px; cursor: pointer; border: 0;">Comprar</button>
-            </article>
-            <article style="flex: 1 1; box-sizing: border-box; text-align: center; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px black; padding: 10px;">
-                <img src="./imagenes/Shorts/Sh4.jpg" alt="Imagen de producto en venta" style="width: 100%; max-width: 200px; height: auto; border-radius: 10px;">
-                <p style="margin-top: 10px;">Shorts deportivos</p>
-                <p style="margin-top: 10px;">$500</p>
-                <button style="padding: 10px 20px; border-radius: 10px; cursor: pointer; border: 0;">Comprar</button>
-            </article>
+    <!-------------------->
 
+    <main class="content">
+        
+        <section class="hero">
+            <div>
+                <h1 class="hero-h1">Prepárate para mejorar tus exámenes con los mejores recursos</h1>
+                <p class="hero-p">Encuentra guías de estudio, exámenes simulados y recursos exclusivos para mejorar tus habilidades académicas.</p>
+            </div>
+            <div>
+                <a href="./pages/asignatures.html">Comenzar</a>
+                <a href="./pages/proximamente.html">Mas información</a>
+            </div>
         </section>
-        <!-- calzado -->
-        <h1 style="margin: 40px auto; " id="calzado">Calzado</h1>
-        <section style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-            <article style="flex: 1 1; box-sizing: border-box; text-align: center; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px black; padding: 10px;">
-                <img src="./imagenes/Calzado/C1.jpg" alt="Imagen de producto en venta" style="width: 100%; max-width: 200px; height: auto; border-radius: 10px;">
-                <p style="margin-top: 10px;">Calzado elegante</p>
-                <p style="margin-top: 10px;">$500</p>
-                <button style="padding: 10px 20px; border-radius: 10px; cursor: pointer; border: 0;">Comprar</button>
+        <section class="introduction-page">
+            <h2>Sobre la Página</h2>
+            <p>Entérate sobre que ofrece la pagina de forma breve y atractiva</p>
+        </section>
+        <section class="sections-1">
+            <article class="section section-asignatures">
+                <div class="img-section-1"></div>
+                <h3>Asignaturas</h3>
+                <p>La pagina tiene un panel en el cual podemos acceder a cualquier asignatura de nuestro grupo y así saber que materias tenemos pendientes o cuales van a vencer.</p>
             </article>
-            <article style="flex: 1 1; box-sizing: border-box; text-align: center; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px black; padding: 10px;">
-                <img src="./imagenes/Calzado/C2.png" alt="Imagen de producto en venta" style="width: 100%; max-width: 200px; height: auto; border-radius: 10px;">
-                <p style="margin-top: 10px;">Calzado elegante</p>
-                <p style="margin-top: 10px;">$500</p>
-                <button style="padding: 10px 20px; border-radius: 10px; cursor: pointer; border: 0;">Comprar</button>
+            <article class="section section-exams">
+                <div class="img-section-2"></div>
+                <h3>Examenes</h3>
+                <p>Esta sección esta centrada a realizar exámenes simulacros días antes del examen. Son exámenes hechos 100% del libro por lo cual será un 90% efectivo a la hora de realizar el exámen real.</p>
             </article>
-            <article style="flex: 1 1; box-sizing: border-box; text-align: center; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px black; padding: 10px;">
-                <img src="./imagenes/Calzado/C3.jpg" alt="Imagen de producto en venta" style="width: 100%; max-width: 200px; height: auto; border-radius: 10px;">
-                <p style="margin-top: 10px;">Calzado elegante</p>
-                <p style="margin-top: 10px;">$500</p>
-                <button style="padding: 10px 20px; border-radius: 10px; cursor: pointer; border: 0;">Comprar</button>
+        </section>
+        <section class="sections-2">
+            <article class="section section-results">
+                <div class="img-section-3"></div>
+                <h3>Asignaturas</h3>
+                <p>La pagina tiene un panel en el cual podemos acceder a cualquier asignatura de nuestro grupo y así saber que materias tenemos pendientes o cuales van a vencer.</p>
             </article>
-            <article style="flex: 1 1; box-sizing: border-box; text-align: center; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px black; padding: 10px;">
-                <img src="./imagenes/Calzado/C4.jpg" alt="Imagen de producto en venta" style="width: 100%; max-width: 200px; height: auto; border-radius: 10px;">
-                <p style="margin-top: 10px;">Calzado elegante</p>
-                <p style="margin-top: 10px;">$500</p>
-                <button style="padding: 10px 20px; border-radius: 10px; cursor: pointer; border: 0;">Comprar</button>
+            <article class="section section-resources">
+                <div class="img-section-4"></div>
+                <h3>Examenes</h3>
+                <p>Esta sección esta centrada a realizar exámenes simulacros días antes del examen. Son exámenes hechos 100% del libro por lo cual será un 90% efectivo a la hora de realizar el exámen real.</p>
             </article>
         </section>
     </main>
-    <footer style="background-color: black; padding: 10px;">
-        <section style="display: flex; justify-content: space-around;">
-            <!--Seccion 1 Icono + politicas-->
-            <section style="display: flex; flex-direction: column; align-items: center;">
-                <img src="./imagenes/logoTC.enc" alt="Icono de los TC oficial" srcset="" width="100px">
-                <p >Politicas de privacidad</p>
-                <p >Condiciones de uso</p>
-            </section>
-            <!--Categorias-->
-            <section style="display: flex; flex-direction: column; align-items: center;">
-                <h2>Categorias</h2>
-                <a style="margin: 5px; text-decoration: none;" href="#camisetas">Camisetas</a>
-                <a style="margin: 5px; text-decoration: none;" href="#sudaderas">Sudaderas</a>
-                <a style="margin: 5px; text-decoration: none;" href="#shorts">Shorts</a>
-                <a style="margin: 5px; text-decoration: none;" href="#calzado">Calzado</a>
-                <a style="margin: 5px; text-decoration: none;" href="./gym-ubicacion.html">Gym ubicacion</a>
-            </section>
-            <!--Productos-->
-            <section style="display: flex; flex-direction: column; align-items: center;">
-                <h2>Productos</h2>
-                <a style="margin: 5px; text-decoration: none;" href="">Lo mas vendido</a>
-                <a style="margin: 5px; text-decoration: none;" href="">Nuevos productos</a>
-            </section>
-            <!--Acerca de-->
-            <a href="">Acerca de</a>
-        </section>
+    <footer>
+        <h3>Manuel Balderas <span>2202491</span></h3>
+        <p>Gracias por visitar esta página web</p>
+        <p>Mucha suerte!</p>
     </footer>
-    <script src="index.js"></script>
+    <!-------------------->
+    <script src="./main.js"></script>
 </body>
 </html>
